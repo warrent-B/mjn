@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>梦践你</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 侧边栏折叠样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+ 
+  <!-- 定制功能 原文章链接 https://blog.csdn.net/wugenqiang/article/details/107071378 -->
+  <!--支持DTO语言作图-->
+  <script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>
+  <script>
+    window.$docsify = {
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "dot") {
+              return (
+                      '<div class="viz">'+ Viz(code, "SVG")+'</div>'
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
+    }
+  </script>
+
+  <!--支持 LaTex 数学公式-->
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+  <!--支持 PDF 页面展示-->	
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script> 
+  <!-- docsify-pdf-embed.js  -->
+  <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+  
+  <!--支持回到顶部-->
+  <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
+  <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.goup.js"></script>
+  <!--支持回到顶部-->	
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 32,
+        locationOffset: 32,
+        title: 'Return To Top',
+        titleAsText: true
+      });
+    });
+  </script>
+  
+  <!--点击页面出现爱心-->
+  <!-- mouse click -->
+  <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+ 
+ 
+<!--
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/pure.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0.8.4/dist/css/theme-defaults.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0.8.4/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0.8.4/dist/css/theme-simple-dark.css"> -->
+</head>
+<body>
+  
+  <div id="app">正在加载中...请稍等</div>
+ 
+
+  <script>
+    window.$docsify = {
+	  ga: 'UA-XXXXX-Y',
+	  loadSidebar: true,
+	  loadNavbar: true,
+	  maxLevel: 5,//最大支持渲染的标题层级
+	  alias: {
+      '/.*/_sidebar.md': '/_sidebar.md',
+      },
+	  subMaxLevel: 5,
+	  sidebarDisplayLevel: 0,
+	  homepage: 'README.md',  //可以将其它的文件作为入口文件进行渲染，默认是README.md
+	  name: '<span style="color: blockquote;font-size:30px">梦践你</span>', //可以用自定义的HTML代码来显示
+      repo: 'https://github.com/github/',
+	  auto2top: true,//切换页面后是否自动跳转到页面顶部
+	  //全文搜索
+	  search: {
+           maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+           noData: '找不到结果',//搜索不到结果时显示
+           paths: 'auto',//自动
+           placeholder: '搜索',//搜索框提示
+		   // 搜索标题的最大程级, 1 - 6
+           depth: 5,
+       },
+	  coverpage: true,  //是否开启封面，要独立进行渲染
+	  themeColor: '#003333', //自定义目录结构的颜色
+	  externalLinkTarget: '_blank', //外连接打开方式，新弹窗口
+	  cornerExternalLinkTarget: '_blank', //右上角连接打开方式
+	  notFoundPage: true, //加载自定义的404页面
+	  topMargin: 90, 
+	  count:{
+		countable:true,
+		fontsize:'0.9em',
+		color:'rgb(90,90,90)',
+		language:'chinese'
+	},
+	markdown: {
+        renderer: {
+          code: function(code, lang, base=null) {
+
+            /* if (lang === "dot") {
+              return (
+                      '<div class="viz">'+ Viz(code, "SVG")+'</div>'
+              );
+            } */
+
+            var pdf_renderer = function(code, lang, verify) {
+              function unique_id_generator(){
+                function rand_gen(){
+                  return Math.floor((Math.random()+1) * 65536).toString(16).substring(1);
+                }
+                return rand_gen() + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + rand_gen() + rand_gen();
+              }
+              if(lang && !lang.localeCompare('pdf', 'en', {sensitivity: 'base'})){
+                if(verify){
+                  return true;
+                }else{
+                  var divId = "markdown_code_pdf_container_" + unique_id_generator().toString();
+                  var container_list = new Array();
+                  if(localStorage.getItem('pdf_container_list')){
+                    container_list = JSON.parse(localStorage.getItem('pdf_container_list'));
+                  }
+                  container_list.push({"pdf_location": code, "div_id": divId});
+                  localStorage.setItem('pdf_container_list', JSON.stringify(container_list));
+                  return (
+                          '<div style="margin-top:'+ PDF_MARGIN_TOP +'; margin-bottom:'+ PDF_MARGIN_BOTTOM +';" id="'+ divId +'">'
+                          + '<a href="'+ code + '"> Link </a> to ' + code +
+                          '</div>'
+                  );
+                }
+              }
+              return false;
+            }
+            if(pdf_renderer(code, lang, true)){
+              return pdf_renderer(code, lang, false);
+            }
+            //return this.origin.code.apply(this, arguments);
+            return (base ? base : this.origin.code.apply(this, arguments));
+          }
+        }
+      },
+  }
+  </script>
+  
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!--搜索框插件-->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- docsify-edit-on-github -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+  <!-- 复制代码到剪贴板 -->
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- 图片缩放 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script> 
+  <!-- 表情插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 侧边栏折叠plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  
+  <!--python代码高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-python.js"></script>
+  <!--go代码高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-go.js"></script>
+  <!--c代码高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-c.js"></script>
+  <!--java代码高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <!--javascript代码高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-javascript.js"></script>
+  <!--sql语句高亮-->
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <!--katex数学公式渲染库-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  
+</body>
+</html>

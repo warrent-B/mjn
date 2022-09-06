@@ -1,5 +1,3 @@
-![img](./assets/lucia-garo-f1kSWIe-W3k-unsplash.jpg)
-
 <div style="background-color:#33ffcc">文章链接：</div>
 https://mp.weixin.qq.com/s/i4xpurajxaCo178WGskPZw
 

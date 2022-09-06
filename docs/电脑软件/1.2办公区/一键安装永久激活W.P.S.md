@@ -1,5 +1,3 @@
-![img](./assets/matt-j_cand-qP54ziIya4k-unsplash.jpg)
-
 <div style="background-color:#33ffcc">文章链接：</div>
 https://mp.weixin.qq.com/s/7KGzm20eXmPH4PJPMXYwMA
 

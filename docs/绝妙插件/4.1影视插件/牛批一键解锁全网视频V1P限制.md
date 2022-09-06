@@ -1,5 +1,3 @@
-![img](./assets/michael-pointner-s0_H18_KGiI-unsplash.jpg)
-
 <div style="background-color:#33ffcc">文章链接：</div>
 https://mp.weixin.qq.com/s/dLZyBy7mDy59sNHujJNFrA
 

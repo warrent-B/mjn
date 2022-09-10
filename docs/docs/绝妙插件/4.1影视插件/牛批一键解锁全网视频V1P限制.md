@@ -7,8 +7,12 @@
 
 
 <div style="background-color:RGB(52,160,40);font-size:18px">文章简介：</div>
-
 该文章主要内容为：
 
 电脑版谷歌浏览器软件、油猴脚本插件、解除V1P限制的脚本，三者配合可解除全网视频V1P限制。
 
+
+
+**本号持续分享有内容的干货，您的关注是我坚持的动力！**
+
+<img src="./../../../_assets/clip_image002.jpg" alt="img" style="zoom:33%;" />

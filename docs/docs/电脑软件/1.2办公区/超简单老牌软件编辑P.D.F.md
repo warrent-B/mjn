@@ -1,7 +1,6 @@
 <div style="background-color:#33ffcc;font-size:18px">文章链接：</div>
 
 
-
 <a href="https://mp.weixin.qq.com/s/i4xpurajxaCo178WGskPZw" target="_blank" >https://mp.weixin.qq.com/s/i4xpurajxaCo178WGskPZw</a>
 
 
@@ -11,3 +10,10 @@
 
 电脑版 PDF 编辑软件学习版，归属于 A.d.o.b.e 系列，支持导出 Word ，支持文档内编辑以及拆分合并 PDF，功能十分强大；
 
+
+
+
+
+**本号持续分享有内容的干货，您的关注是我坚持的动力！**
+
+<img src="./../../../_assets/clip_image002.jpg" alt="img" style="zoom:33%;" />

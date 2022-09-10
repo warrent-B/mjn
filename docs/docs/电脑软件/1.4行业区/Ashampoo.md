@@ -1,7 +1,6 @@
 <div style="background-color:#33ffcc;font-size:18px">文章链接：</div>
 
 
-
 <a href="https://mp.weixin.qq.com/s/fQJ3P48G3Ufk5eagvMPe_A" target="_blank" >https://mp.weixin.qq.com/s/fQJ3P48G3Ufk5eagvMPe_A</a>
 
 
@@ -19,3 +18,8 @@
 
 
 
+
+
+**本号持续分享有内容的干货，您的关注是我坚持的动力！**
+
+<img src="./../../../_assets/clip_image002.jpg" alt="img" style="zoom:33%;" />

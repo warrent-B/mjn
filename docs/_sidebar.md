@@ -1,4 +1,4 @@
-* <font style="font-size:20px">[免责声明](introduce)</font>
+* <font style="font-size:20px;font-weight:bold">[免责声明](introduce)</font>
 
 - [一、电脑软件](docs/电脑软件/电脑软件.md)
   - [1.1 音乐区](docs/电脑软件/1.1音乐区/音乐区.md)

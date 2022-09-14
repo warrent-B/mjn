@@ -8,9 +8,9 @@
 
 **本号持续分享有内容的干货，您的关注是我坚持的动力！感谢关注！感恩遇见！！！**
 
-<font style="color:red">特别提醒：</font>
+<font style="color:red;font-weight:bold">特别提醒：</font>
 
-<font style="color:red">本号及本站所有资源均来自互联网，本站只做学习分享，本号及本站任何资源不得用于商业用途，请下载资源后 24 小时内删除。</font>
+<font style="color:red;font-weight:bold">本号及本站所有资源均来自互联网，本站只做学习分享，本号及本站任何资源不得用于商业用途，请下载资源后 24 小时内删除。</font>
 
 <a href="https://warrent-b.github.io/mjn/#/introduce" target="_blank" style="color:blue;font-size:20px" >详情请阅读免责声明</a>。
 

@@ -16,7 +16,7 @@
 
 <a href="https://warrent-b.github.io/mjn/#/introduce" target="_blank" style="color:blue;font-size:20px" >详情请阅读免责声明</a>。
 
-
+<font style="color:RGB(52,150,150);font-size:20px;font-weight:bold">若您觉得下面的分类方式不方便您查找资源，请您移步至</font>  <a href="https://warrent-b.github.io/mjn/docs/功能分类/功能分类.md" target="_blank" style="color:blue;font-size:20px;font-weight:bold" >功能分类</a>  <font style="color:RGB(52,150,150);font-size:20px;font-weight:bold">这里是以具体的功能作为分类的依据，便于您更为直观的寻找您所需的资源。</font>
 
 - [一、电脑软件](docs/电脑软件/电脑软件.md)
   - [1.1 音乐区](docs/电脑软件/1.1音乐区/音乐区.md)
